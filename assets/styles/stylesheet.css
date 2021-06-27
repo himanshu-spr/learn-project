@@ -1,0 +1,363 @@
+/*
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+*/
+html,body { height: 100%; margin: 0px; padding: 0px; 
+    font-family: 'Lato', sans-serif;
+}
+
+.main {
+    height: 100%;
+}
+
+.header-container {
+    width: 100%;
+    background-color: #7af0a3;
+    height: 8%;
+    display: flex;
+  /*  overflow: hidden;
+    position: fixed;
+    */
+}
+
+.img-container {
+    padding: 0 20px;
+    align-self: center;
+}
+
+.logo  {
+    height: 50px;
+    border-radius: 50%; 
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar-list {
+    align-content: center;
+    align-self: center;
+    margin:1rem;
+    padding:0;
+}
+
+.nav-link {
+    padding: 0 1rem;
+    margin-top:2rem;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 30px; 
+    color:#524f4f;  
+}
+
+.nav-link:hover { 
+    color:black;  
+}
+
+.link-active {
+    background-color: thistle;
+    color:red;
+}
+
+.info-container {
+    height: 88%;
+}
+
+.info-container p {
+    font-weight: 700;
+    font-size: 100px;
+    margin:unset;
+    padding-top: 100px;
+    padding-left: 100px;
+    color: #524f4f;
+}
+
+.student-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 1rem;
+    margin:0;
+}
+
+.student {
+    display:flex;
+    box-sizing: border-box;
+    padding:0.5rem 0.5rem;
+    margin: 1rem;
+    width: 15rem;
+    height: 9rem;
+    border-radius: 1rem;
+    justify-items: center;
+    box-shadow: 1px 1px 8px rgba(0,0,0,0.3);
+}
+
+.student-img{
+    height: 6rem;
+    width:6rem;
+    border-radius: 50%;
+}
+
+.student-details {
+    display: flex;
+    flex-direction: column;
+    padding:0 0.5rem;
+    justify-content: center;
+}
+
+
+.student-text {
+    text-align: center;
+    font-size: 0.9rem;
+    margin: 0.2rem;
+}
+
+.student-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+.courses-container {
+    margin: 0;
+    padding:0;
+}
+.courses-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0.8rem 0.8rem;
+}
+
+.courses-add {
+    grid-column: 3/4;
+    justify-self: center;
+    align-self: center;   
+}
+
+.courses-add button {
+    padding: 0.3rem;
+    background-color: #f5cb42;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 1rem;
+    box-shadow: 1px 1px 3px #524f4f;
+    border-color: transparent;
+    color:#524f4f;
+    cursor: pointer;
+}
+
+.courses-add button:hover {
+    background-color: #524f4f;
+    transition:200ms; 
+    color:#f5cb42;
+}
+
+.courses-dropdown {
+    display: flex;
+    padding: 0 1rem;
+    justify-content: center;
+}
+
+.courses-input {
+    padding-top: 0.5rem;
+    padding-left: 1rem;
+    font-weight: 700;
+    
+    color:#524f4f;
+}
+
+.courses-input label{
+    padding-right: 0.5rem;;
+}
+
+.submit-btn {
+    margin: 0 2rem;
+    padding: 0.5rem;
+    background-color:#f5cb42 ;
+    border-radius: 5px;
+    font-weight: 700;
+    border-color: transparent;
+    box-shadow: 2px 2px 5px #524f4f;
+    color:#524f4f;
+}
+
+.submit-btn:hover {
+    background-color: #524f4f;
+    transition:200ms; 
+    color:#f5cb42;
+}
+
+.section-seperation {
+    border-color: transparent;
+    box-shadow: 2px 2px 5px rgba(0,0,0,.5);
+}
+
+.courses-info {
+    padding:0;
+    margin:0;
+}
+
+
+
+.search-option {
+    display: flex;
+    align-self: center;
+    justify-self: center;
+}
+
+
+.search-input {
+    padding: .3rem;
+    font-size: 1rem;
+    border: 1px solid grey;
+    width: 70%;
+    float: left;
+    background : #f1f1f1;
+}
+
+.search-btn {
+    width: 15%;
+    padding: 0.3rem;
+    background: #f5cb42;
+    color: #524f4f;
+    font-size: 1rem;
+    float:left;
+    border: 1px solid grey;
+    border-left: none; /* Prevent double borders */
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 700px) {
+    .nav-link {
+        padding: 0 1rem;
+        margin-top:1rem;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 25px; 
+        color:#524f4f;  
+    }
+}
+
+.course-result-container {
+    display: flex;
+    width: 90%;
+    flex-direction: row;
+    justify-content: center;
+    
+    padding: 1rem 1rem;
+    flex-wrap: wrap;
+    margin: 0 1rem;
+}
+
+.course {
+    display:flex;
+    justify-content:center;
+    margin:0;
+    margin: 0.5rem 0.5rem;
+    width:30rem;
+    height:6rem;
+    box-sizing: border-box;
+}
+
+.course-name {
+    background-color:rgba(0,0,0,0.1);
+    width:18rem;
+    height: 4rem;
+    padding: 1rem 1.5rem;
+    border-bottom: solid 1px rgba(0,0,0,0.3);
+}
+
+
+.course-heading {
+    font-weight: 700;
+    font-size: 20px;
+    margin:0;
+}
+
+.course-number {
+    font-weight: 700;
+    font-size: 20px;
+    margin:0;
+    padding:0;
+}
+
+.course-prof {
+    margin-top: 0.3rem;
+}
+
+.course-opted {
+    padding: 1rem 1.5rem;
+    height:4rem;
+    background-color:rgba(0,0,0,0.1);
+    border-bottom: solid 1px rgba(0,0,0,0.3);
+    border-left: solid 1px rgba(0,0,0,0.3);
+}
+
+.course-num-info {
+    margin-top: 0.2rem;
+    font-size: 0.9rem;
+}
+
+#course-form {
+    display: none;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 2;
+    width: 100%;
+    height:100%;
+    background-color:rgba(0,0,0,0.4);
+    
+}
+
+#form-container {
+    display: none;
+    position: fixed;
+    top:50%;
+    left:50%;
+    z-index: 3;
+    width: 20rem;
+    height:20rem;
+    margin-top: -10rem;
+    margin-left: -10rem;
+    border: solid 5px white;
+    background-color: #7af0a3;
+
+    flex-direction: column;
+    padding: 1rem;
+    color: #524f4f;
+}
+
+#form-container  input {
+    margin-bottom: 0.8rem;
+    padding: 0.3rem;
+    margin-top: 0.2rem;
+}
+
+#form-container button {
+    background-color: #f5cb42;
+    padding: 0.3rem;
+    width:50%;
+    align-self: center;
+    margin-top: 1rem;
+    border: solid 1px grey;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+    color: #524f4f;
+}
+
+#form-container button:hover {
+    background-color: #524f4f;
+    color: #f5cb42
+}
+
+#form-container h2 {
+    align-self: center;
+}
+
+.select-branch {
+    margin-bottom: 0.8rem;
+    padding: 0.3rem;
+    margin-top: 0.2rem;
+}

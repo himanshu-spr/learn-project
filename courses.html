@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="./assets/styles/stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="main">
+        <nav class="header-container"> 
+            <div class="img-container">
+                <div>
+                    <a href="index.html"><img class="logo" src="./assets/images/IIT-BHU-faculty-post.png" /></a>
+                </div>
+            </div>
+            <div class="navbar">
+                <ul class="navbar-list">
+                    <a class="nav-link" href="students.html">Students</a> 
+                    <a class="nav-link" href="courses.html">Courses</a> 
+                </ul>
+            </div>
+        </nav>
+        <section class="courses-container">
+            <div class="courses-options">
+                <div class="courses-dropdown">
+                    <form class="courses-input"> 
+                        <label for="year">Year</label>
+                        <select id="year" name="year">
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                        </select> 
+                      </form>
+                      <form class=courses-input>
+                        <label for="branch">Branch</label>
+                        <select id="branch" name="branch">
+                          <option value="cse">CSE</option>
+                          <option value="mech">Mechanical</option>
+                          <option value="ece">Electronics</option>
+                          <option value="elec">Electrical</option>
+                          <option value="civil">Civil</option>
+                        </select>
+                      </form>
+                      
+                </div>
+                <div class="search-option">
+                    <form class="search">
+                        <input class="search-input" type="text" placeholder="Search" name="search">
+                        <button class="search-btn" type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                </div>
+                <div class="courses-add">
+                    <button onclick="addCourse()">Add Course</button>
+                </div>
+<!-- form details
+                 -->
+                 <div id="course-form">
+                    <form id="form-container">
+                        <h2>Add new course</h2>
+                    
+                        <label for="coursename">Course</label>
+                        <input type="text" name="coursename" required>
+                    
+                        <label for="branch">Branch</label>
+                        <select class="select-branch" name="branch">
+                            <option value="cse">CSE</option>
+                            <option value="mech">Mechanical</option>
+                            <option value="ece">Electronics</option>
+                            <option value="elec">Electrical</option>
+                            <option value="civil">Civil</option>
+                        </select>
+                        <label for="year">Year</label>
+                        <input type="number" name="year" min="1" max="4" required>
+                        <button type="submit" class="form-submit" onclick="closeForm()">Submit</button>
+                      </form>
+                 </div>
+            </div>
+            <hr class="section-seperation">
+            <div class="courses-info">
+                <div class="course-result-container">
+                    
+                    <div class="course">
+                        <div class="course-name">
+                            <h2 class="course-heading">Operating System</h2>
+                            <p class="course-prof"><em>Taught by Prof. John Doe.</em></p>
+                        </div>
+                        <div class="course-opted">
+                            <h2 class="course-number">45</h2>
+                            <p class="course-num-info">students opted this course.</p> 
+                        </div>
+                    </div>
+                    
+                    <div class="course">
+                        <div class="course-name">
+                            <h2 class="course-heading">Operating System</h2>
+                            <p class="course-prof"><em>Taught by Prof. John Doe.</em></p>
+                        </div>
+                        <div class="course-opted">
+                            <h2 class="course-number">45</h2>
+                            <p class="course-num-info">students opted this course.</p> 
+                        </div>
+                    </div>
+                    
+                    <div class="course">
+                        <div class="course-name">
+                            <h2 class="course-heading">Operating System</h2>
+                            <p class="course-prof"><em>Taught by Prof. John Doe.</em></p>
+                        </div>
+                        <div class="course-opted">
+                            <h2 class="course-number">45</h2>
+                            <p class="course-num-info">students opted this course.</p> 
+                        </div>
+                    </div>
+                    
+                    <div class="course">
+                        <div class="course-name">
+                            <h2 class="course-heading">Operating System</h2>
+                            <p class="course-prof"><em>Taught by Prof. John Doe.</em></p>
+                        </div>
+                        <div class="course-opted">
+                            <h2 class="course-number">45</h2>
+                            <p class="course-num-info">students opted this course.</p> 
+                        </div>
+                    </div>
+                    
+                    <div class="course">
+                        <div class="course-name">
+                            <h2 class="course-heading">Operating System</h2>
+                            <p class="course-prof"><em>Taught by Prof. John Doe.</em></p>
+                        </div>
+                        <div class="course-opted">
+                            <h2 class="course-number">45</h2>
+                            <p class="course-num-info">students opted this course.</p> 
+                        </div>
+                    </div>
+                    
+                    <div class="course">
+                        <div class="course-name">
+                            <h2 class="course-heading">Operating System</h2>
+                            <p class="course-prof"><em>Taught by Prof. John Doe.</em></p>
+                        </div>
+                        <div class="course-opted">
+                            <h2 class="course-number">45</h2>
+                            <p class="course-num-info">students opted this course.</p> 
+                        </div>
+                    </div>
+                    
+                    <div class="course">
+                        <div class="course-name">
+                            <h2 class="course-heading">Operating System</h2>
+                            <p class="course-prof"><em>Taught by Prof. John Doe.</em></p>
+                        </div>
+                        <div class="course-opted">
+                            <h2 class="course-number">45</h2>
+                            <p class="course-num-info">students opted this course.</p> 
+                        </div>
+                    </div>
+                    
+                    <div class="course">
+                        <div class="course-name">
+                            <h2 class="course-heading">Operating System</h2>
+                            <p class="course-prof"><em>Taught by Prof. John Doe.</em></p>
+                        </div>
+                        <div class="course-opted">
+                            <h2 class="course-number">45</h2>
+                            <p class="course-num-info">students opted this course.</p> 
+                        </div>
+                    </div>
+                    
+                    <div class="course">
+                        <div class="course-name">
+                            <h2 class="course-heading">Operating System</h2>
+                            <p class="course-prof"><em>Taught by Prof. John Doe.</em></p>
+                        </div>
+                        <div class="course-opted">
+                            <h2 class="course-number">45</h2>
+                            <p class="course-num-info">students opted this course.</p> 
+                        </div>
+                    </div>
+                    
+                    <div class="course">
+                        <div class="course-name">
+                            <h2 class="course-heading">Operating System</h2>
+                            <p class="course-prof"><em>Taught by Prof. John Doe.</em></p>
+                        </div>
+                        <div class="course-opted">
+                            <h2 class="course-number">45</h2>
+                            <p class="course-num-info">students opted this course.</p> 
+                        </div>
+                    </div>
+                    
+                    <div class="course">
+                        <div class="course-name">
+                            <h2 class="course-heading">Operating System</h2>
+                            <p class="course-prof"><em>Taught by Prof. John Doe.</em></p>
+                        </div>
+                        <div class="course-opted">
+                            <h2 class="course-number">45</h2>
+                            <p class="course-num-info">students opted this course.</p> 
+                        </div>
+                    </div>
+                    
+                    <div class="course">
+                        <div class="course-name">
+                            <h2 class="course-heading">Operating System</h2>
+                            <p class="course-prof"><em>Taught by Prof. John Doe.</em></p>
+                        </div>
+                        <div class="course-opted">
+                            <h2 class="course-number">45</h2>
+                            <p class="course-num-info">students opted this course.</p> 
+                        </div>
+                    </div>
+                    
+                    <div class="course">
+                        <div class="course-name">
+                            <h2 class="course-heading">Operating System</h2>
+                            <p class="course-prof"><em>Taught by Prof. John Doe.</em></p>
+                        </div>
+                        <div class="course-opted">
+                            <h2 class="course-number">45</h2>
+                            <p class="course-num-info">students opted this course.</p> 
+                        </div>
+                    </div>
+                    
+                    <div class="course">
+                        <div class="course-name">
+                            <h2 class="course-heading">Operating System</h2>
+                            <p class="course-prof"><em>Taught by Prof. John Doe.</em></p>
+                        </div>
+                        <div class="course-opted">
+                            <h2 class="course-number">45</h2>
+                            <p class="course-num-info">students opted this course.</p> 
+                        </div>
+                    </div>
+                    
+                    
+
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
