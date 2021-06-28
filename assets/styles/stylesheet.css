@@ -5,6 +5,8 @@
   box-sizing: border-box;
 }
 */
+
+
 html,body { height: 100%; margin: 0px; padding: 0px; 
     font-family: 'Lato', sans-serif;
 }
@@ -99,6 +101,8 @@ html,body { height: 100%; margin: 0px; padding: 0px;
     height: 6rem;
     width:6rem;
     border-radius: 50%;
+    align-self: center;
+    border: solid 0.01rem rgba(0,0,0,0.1);
 }
 
 .student-details {
@@ -116,9 +120,15 @@ html,body { height: 100%; margin: 0px; padding: 0px;
 }
 
 .student-name {
+    white-space:nowrap;
+    display: inline-block;
+    overflow: hidden;   
+    text-overflow: ellipsis;
     font-size: 1.1rem;
     font-weight: 700;
+    width:100px;
 }
+
 .courses-container {
     margin: 0;
     padding:0;
@@ -237,23 +247,54 @@ html,body { height: 100%; margin: 0px; padding: 0px;
         font-size: 25px; 
         color:#524f4f;  
     }
+    .search-input {
+        padding: .2rem;
+        font-size: 0.8rem;
+        width: 60%;
+    }
+    .search-btn {
+        width: 13%;
+        padding: 0.2rem;
+        font-size: 0.8rem;
+        float:left;
+    }
+    .courses-add button {
+        padding: 0.2rem;
+        font-size: 0.8rem;
+    }
+
+    .courses-dropdown {
+        padding: 0 0.8rem;
+    }
+    
+    .courses-input {
+        padding-top: 0.3rem;
+        padding-left: 0.8rem;
+    }
+    
+    .courses-input label{
+        padding-right: 0.1rem;
+    }
 }
 
 .course-result-container {
     display: flex;
-    width: 90%;
     flex-direction: row;
     justify-content: center;
     
-    padding: 1rem 1rem;
+    padding: 0.5rem 1rem;
     flex-wrap: wrap;
-    margin: 0 1rem;
+    margin:0;
+}
+
+.course-info {
+    padding:0 1rem;
 }
 
 .course {
     display:flex;
     justify-content:center;
-    margin:0;
+    margin:0.5rem;
     margin: 0.5rem 0.5rem;
     width:30rem;
     height:6rem;
@@ -266,13 +307,21 @@ html,body { height: 100%; margin: 0px; padding: 0px;
     height: 4rem;
     padding: 1rem 1.5rem;
     border-bottom: solid 1px rgba(0,0,0,0.3);
+    overflow: scroll;  
+    text-overflow:ellipsis;  
+    
 }
 
 
 .course-heading {
+    white-space:nowrap;
+    display: inline-block;
+    overflow: hidden;   
+    text-overflow: ellipsis;
     font-weight: 700;
     font-size: 20px;
     margin:0;
+    width:200px;
 }
 
 .course-number {
