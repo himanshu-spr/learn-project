@@ -3,19 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Student Management System</title>
     <link rel="stylesheet" href="./assets/styles/stylesheet.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="script.js" defer></script>
 </head>
-<body>
+<body onload="studentView.init()">
     <div class="main">
         <header class="header-container"> 
             <div class="img-container">
-                <div>
-                    <a href="index.html"><img class="logo" src="./assets/images/IIT-BHU-faculty-post.png" /></a>
-                </div>
+                <a href="index.html"><img class="logo" src="./assets/images/IIT-BHU-faculty-post.png" /></a>
             </div>
             <nav class="navbar">
                 <ul class="navbar-list">
@@ -25,153 +24,34 @@
             </nav>
         </header>
         <section class="student-info-conatiner"> 
-            <div class="student-info">
-                <div class="student">
-                    <img class=student-img src="./assets/images/head-659652_1280.png">
-                    <div class="student-details">
-                        <p class="student-text student-name">Himanshu Chauhan</p>
-                        <p class="student-text"><strong>ID:  </strong>123</p>
-                        <p class="student-text"><strong>Year:  </strong>2</p>
-                        <p class="student-text"><strong>Branch:  </strong>CSE</p>
-                    </div>
-                </div>
-                <div class="student">
-                    <img class=student-img src="./assets/images/head-659652_1280.png">
-                    <div class="student-details">
-                        <p class="student-text student-name">John Doe</p>
-                        <p class="student-text"><strong>ID:  </strong>123</p>
-                        <p class="student-text"><strong>Year:  </strong>2</p>
-                        <p class="student-text"><strong>Branch:  </strong>CSE</p>
-                    </div>
-                </div>
-                <div class="student">
-                    <img class=student-img src="./assets/images/head-659652_1280.png">
-                    <div class="student-details">
-                        <p class="student-text student-name">John Doe</p>
-                        <p class="student-text"><strong>ID:  </strong>123</p>
-                        <p class="student-text"><strong>Year:  </strong>2</p>
-                        <p class="student-text"><strong>Branch:  </strong>CSE</p>
-                    </div>
-                </div>
-                <div class="student">
-                    <img class=student-img src="./assets/images/head-659652_1280.png">
-                    <div class="student-details">
-                        <p class="student-text student-name">John Doe</p>
-                        <p class="student-text"><strong>ID:  </strong>123</p>
-                        <p class="student-text"><strong>Year:  </strong>2</p>
-                        <p class="student-text"><strong>Branch:  </strong>CSE</p>
-                    </div>
-                </div>
-                <div class="student">
-                    <img class=student-img src="./assets/images/head-659652_1280.png">
-                    <div class="student-details">
-                        <p class="student-text student-name">John Doe</p>
-                        <p class="student-text"><strong>ID:  </strong>123</p>
-                        <p class="student-text"><strong>Year:  </strong>2</p>
-                        <p class="student-text"><strong>Branch:  </strong>CSE</p>
-                    </div>
-                </div>
-                <div class="student">
-                    <img class=student-img src="./assets/images/head-659652_1280.png">
-                    <div class="student-details">
-                        <p class="student-text student-name">John Doe</p>
-                        <p class="student-text"><strong>ID:  </strong>123</p>
-                        <p class="student-text"><strong>Year:  </strong>2</p>
-                        <p class="student-text"><strong>Branch:  </strong>CSE</p>
-                    </div>
-                </div>
-                <div class="student">
-                    <img class=student-img src="./assets/images/head-659652_1280.png">
-                    <div class="student-details">
-                        <p class="student-text student-name">John Doe</p>
-                        <p class="student-text"><strong>ID:  </strong>123</p>
-                        <p class="student-text"><strong>Year:  </strong>2</p>
-                        <p class="student-text"><strong>Branch:  </strong>CSE</p>
-                    </div>
-                </div>
-                <div class="student">
-                    <img class=student-img src="./assets/images/head-659652_1280.png">
-                    <div class="student-details">
-                        <p class="student-text student-name">John Doe</p>
-                        <p class="student-text"><strong>ID:  </strong>123</p>
-                        <p class="student-text"><strong>Year:  </strong>2</p>
-                        <p class="student-text"><strong>Branch:  </strong>CSE</p>
-                    </div>
-                </div>
-                <div class="student">
-                    <img class=student-img src="./assets/images/head-659652_1280.png">
-                    <div class="student-details">
-                        <p class="student-text student-name">John Doe</p>
-                        <p class="student-text"><strong>ID:  </strong>123</p>
-                        <p class="student-text"><strong>Year:  </strong>2</p>
-                        <p class="student-text"><strong>Branch:  </strong>CSE</p>
-                    </div>
-                </div>
-                <div class="student">
-                    <img class=student-img src="./assets/images/head-659652_1280.png">
-                    <div class="student-details">
-                        <p class="student-text student-name">John Doe</p>
-                        <p class="student-text"><strong>ID:  </strong>123</p>
-                        <p class="student-text"><strong>Year:  </strong>2</p>
-                        <p class="student-text"><strong>Branch:  </strong>CSE</p>
-                    </div>
-                </div>
-                <div class="student">
-                    <img class=student-img src="./assets/images/head-659652_1280.png">
-                    <div class="student-details">
-                        <p class="student-text student-name">John Doe</p>
-                        <p class="student-text"><strong>ID:  </strong>123</p>
-                        <p class="student-text"><strong>Year:  </strong>2</p>
-                        <p class="student-text"><strong>Branch:  </strong>CSE</p>
-                    </div>
-                </div>
-                <div class="student">
-                    <img class=student-img src="./assets/images/head-659652_1280.png">
-                    <div class="student-details">
-                        <p class="student-text student-name">John Doe</p>
-                        <p class="student-text"><strong>ID:  </strong>123</p>
-                        <p class="student-text"><strong>Year:  </strong>2</p>
-                        <p class="student-text"><strong>Branch:  </strong>CSE</p>
-                    </div>
-                </div>
-                <div class="student">
-                    <img class=student-img src="./assets/images/head-659652_1280.png">
-                    <div class="student-details">
-                        <p class="student-text student-name">John Doe</p>
-                        <p class="student-text"><strong>ID:  </strong>123</p>
-                        <p class="student-text"><strong>Year:  </strong>2</p>
-                        <p class="student-text"><strong>Branch:  </strong>CSE</p>
-                    </div>
-                </div>
-                <div class="student">
-                    <img class=student-img src="./assets/images/head-659652_1280.png">
-                    <div class="student-details">
-                        <p class="student-text student-name">John Doe</p>
-                        <p class="student-text"><strong>ID:  </strong>123</p>
-                        <p class="student-text"><strong>Year:  </strong>2</p>
-                        <p class="student-text"><strong>Branch:  </strong>CSE</p>
-                    </div>
-                </div>
-                <div class="student">
-                    <img class=student-img src="./assets/images/head-659652_1280.png">
-                    <div class="student-details">
-                        <p class="student-text student-name">John Doe</p>
-                        <p class="student-text"><strong>ID:  </strong>123</p>
-                        <p class="student-text"><strong>Year:  </strong>2</p>
-                        <p class="student-text"><strong>Branch:  </strong>CSE</p>
-                    </div>
-                </div>
-                <div class="student">
-                    <img class=student-img src="./assets/images/head-659652_1280.png">
-                    <div class="student-details">
-                        <p class="student-text student-name">John Doe</p>
-                        <p class="student-text"><strong>ID:  </strong>123</p>
-                        <p class="student-text"><strong>Year:  </strong>2</p>
-                        <p class="student-text"><strong>Branch:  </strong>CSE</p>
-                    </div>
-                </div>
-
+            <div id="student-info">
+                
             </div>
+            <!-- show course -->
+            <div id="show-course-background">
+                <div id="show-course-container">
+                    <h2>Courses Taken</h2>
+                    <a class="student-course-close">
+                        <i class="fa fa-window-close" id="student-course-close"></i>
+                    </a>
+                    <div class="student-course-container">
+
+                    </div>
+                </div>
+             </div>
+
+             <!-- modify courses -->
+             <div id="modify-course-background">
+                <div id="modify-course-container">
+                    <h2>Modify Courses Taken</h2>
+                    <a class="modify-student-course-close">
+                        <i class="fa fa-window-close" id="modify-student-course-close"></i>
+                    </a>
+                    <div class="student-course-modify-container">
+
+                    </div>
+                </div>
+             </div>
         </section>
     </div>
 </body>
