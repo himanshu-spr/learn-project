@@ -10,13 +10,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
 </head>
-<body>
+<body onload="coursesView.init()">
     <div class="main">
         <nav class="header-container"> 
             <div class="img-container">
-                <div>
-                    <a href="index.html"><img class="logo" src="./assets/images/IIT-BHU-faculty-post.png" /></a>
-                </div>
+                <a href="index.html"><img class="logo" src="./assets/images/IIT-BHU-faculty-post.png" /></a>
             </div>
             <div class="navbar">
                 <ul class="navbar-list">
@@ -24,222 +22,132 @@
                     <a class="nav-link" href="courses.html">Courses</a> 
                 </ul>
             </div>
+            <form name="country" class="country-form"> 
+                <label for="country">Country</label>
+                <select id="country" name="country">
+
+                </select> 
+            </form>
         </nav>
         <section class="courses-container">
             <div class="courses-options">
+                <div class="course-view">
+                    <form name="courseView">
+                        <label for="view">View By</label>
+                        <select name="view">
+                            <option value="grid">Grid</option>
+                            <option value="list">List</option>
+                        </select>
+                    </form>
+                </div>
                 <div class="courses-dropdown">
-                    <form class="courses-input"> 
+                    <form name="courseYearInput" class="courses-input"> 
                         <label for="year">Year</label>
                         <select id="year" name="year">
+                          <option value="0">All Years</option>
                           <option value="1">1</option>
                           <option value="2">2</option>
                           <option value="3">3</option>
                           <option value="4">4</option>
                         </select> 
                       </form>
-                      <form class=courses-input>
+                      <form name="courseBranchInput" class=courses-input>
                         <label for="branch">Branch</label>
                         <select id="branch" name="branch">
-                          <option value="cse">CSE</option>
-                          <option value="mech">Mechanical</option>
-                          <option value="ece">Electronics</option>
-                          <option value="elec">Electrical</option>
-                          <option value="civil">Civil</option>
+                          <option value="0">All Branches</option>
+                          <option value="CSE">CSE</option>
+                          <option value="ME">Mechanical</option>
+                          <option value="ECE">Electronics</option>
+                          <option value="EE">Electrical</option>
+                          <option value="CE">Civil</option>
                         </select>
                       </form>
                       
                 </div>
+                
+
+                <div class="course-sort">
+                    <form name="courseSort">
+                        <label for="sort">Sort By</label>
+                        <select name="sort">
+                            <option value="0">Relevance</option>
+                            <option value="1">Strength - Low to High</option>
+                            <option value="-1">Strength - High to Low</option>
+                        </select>
+                    </form>
+                </div>
                 <div class="search-option">
-                    <form class="search">
-                        <input class="search-input" type="text" placeholder="Search" name="search">
+                    <form class="search" name="courseSearch">
                         <button class="search-btn" type="submit"><i class="fa fa-search"></i></button>
+                        <input class="search-input" type="text" placeholder="Search" name="search">
                     </form>
                 </div>
                 <div class="courses-add">
-                    <button onclick="addCourse()">Add Course</button>
+                    <button id="course-add-btn">Add Course</button>
                 </div>
 <!-- form details
                  -->
                  <div id="course-form">
-                    <form id="form-container">
+                    <form id="form-container" name="addCourse">
                         <h2>Add new course</h2>
                     
-                        <label for="coursename">Course</label>
+                        <label for="coursename">Course Name</label>
                         <input type="text" name="coursename" required>
-                    
+
+                        <label for="coursecode">Course Code</label>
+                        <input type="text" name="coursecode" required>
+
                         <label for="branch">Branch</label>
-                        <select class="select-branch" name="branch">
-                            <option value="cse">CSE</option>
-                            <option value="mech">Mechanical</option>
-                            <option value="ece">Electronics</option>
-                            <option value="elec">Electrical</option>
-                            <option value="civil">Civil</option>
+                        <select name="branch" required>
+                            <option value="CSE">CSE</option>
+                            <option value="ME">Mechanical</option>
+                            <option value="ECE">Electronics</option>
+                            <option value="EE">Electrical</option>
+                            <option value="CE">Civil</option>
                         </select>
                         <label for="year">Year</label>
-                        <input type="number" name="year" min="1" max="4" required>
-                        <button type="submit" class="form-submit" onclick="closeForm()">Submit</button>
+                        <select name="year" required>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                        <button type="submit" class="form-submit">Submit</button>
+                      </form>
+                 </div>
+
+                 <div id="edit-course-form">
+                    <form id="form-container" name="editCourse">
+                        <h2>Edit course</h2>
+                    
+                        <label for="coursename">Course Name</label>
+                        <input type="text" name="coursename" required>
+
+                        <label for="coursecode">Course Code</label>
+                        <input disabled type="text" name="coursecode" required>
+
+                        <label for="branch">Branch</label>
+                        <select name="branch" required>
+                            <option value="CSE">CSE</option>
+                            <option value="ME">Mechanical</option>
+                            <option value="ECE">Electronics</option>
+                            <option value="EE">Electrical</option>
+                            <option value="CE">Civil</option>
+                        </select>
+                        <label for="year">Year</label>
+                        <select  name="year" required>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                        <button type="submit" class="form-submit">Submit</button>
                       </form>
                  </div>
             </div>
             <hr class="section-seperation">
             <div class="courses-info">
-                <div class="course-result-container">
-                    
-                    <div class="course">
-                        <div class="course-name">
-                            <h2 class="course-heading">Operating System</h2>
-                            <p class="course-prof"><em>Taught by Prof. John Doe.</em></p>
-                        </div>
-                        <div class="course-opted">
-                            <h2 class="course-number">45</h2>
-                            <p class="course-num-info">students opted this course.</p> 
-                        </div>
-                    </div>
-                    
-                    <div class="course">
-                        <div class="course-name">
-                            <h2 class="course-heading">Operating System</h2>
-                            <p class="course-prof"><em>Taught by Prof. John Doe.</em></p>
-                        </div>
-                        <div class="course-opted">
-                            <h2 class="course-number">45</h2>
-                            <p class="course-num-info">students opted this course.</p> 
-                        </div>
-                    </div>
-                    
-                    <div class="course">
-                        <div class="course-name">
-                            <h2 class="course-heading">Operating System</h2>
-                            <p class="course-prof"><em>Taught by Prof. John Doe.</em></p>
-                        </div>
-                        <div class="course-opted">
-                            <h2 class="course-number">45</h2>
-                            <p class="course-num-info">students opted this course.</p> 
-                        </div>
-                    </div>
-                    
-                    <div class="course">
-                        <div class="course-name">
-                            <h2 class="course-heading">Operating System</h2>
-                            <p class="course-prof"><em>Taught by Prof. John Doe.</em></p>
-                        </div>
-                        <div class="course-opted">
-                            <h2 class="course-number">45</h2>
-                            <p class="course-num-info">students opted this course.</p> 
-                        </div>
-                    </div>
-                    
-                    <div class="course">
-                        <div class="course-name">
-                            <h2 class="course-heading">Operating System</h2>
-                            <p class="course-prof"><em>Taught by Prof. John Doe.</em></p>
-                        </div>
-                        <div class="course-opted">
-                            <h2 class="course-number">45</h2>
-                            <p class="course-num-info">students opted this course.</p> 
-                        </div>
-                    </div>
-                    
-                    <div class="course">
-                        <div class="course-name">
-                            <h2 class="course-heading">Operating System</h2>
-                            <p class="course-prof"><em>Taught by Prof. John Doe.</em></p>
-                        </div>
-                        <div class="course-opted">
-                            <h2 class="course-number">45</h2>
-                            <p class="course-num-info">students opted this course.</p> 
-                        </div>
-                    </div>
-                    
-                    <div class="course">
-                        <div class="course-name">
-                            <h2 class="course-heading">Operating System</h2>
-                            <p class="course-prof"><em>Taught by Prof. John Doe.</em></p>
-                        </div>
-                        <div class="course-opted">
-                            <h2 class="course-number">45</h2>
-                            <p class="course-num-info">students opted this course.</p> 
-                        </div>
-                    </div>
-                    
-                    <div class="course">
-                        <div class="course-name">
-                            <h2 class="course-heading">Operating System</h2>
-                            <p class="course-prof"><em>Taught by Prof. John Doe.</em></p>
-                        </div>
-                        <div class="course-opted">
-                            <h2 class="course-number">45</h2>
-                            <p class="course-num-info">students opted this course.</p> 
-                        </div>
-                    </div>
-                    
-                    <div class="course">
-                        <div class="course-name">
-                            <h2 class="course-heading">Operating System</h2>
-                            <p class="course-prof"><em>Taught by Prof. John Doe.</em></p>
-                        </div>
-                        <div class="course-opted">
-                            <h2 class="course-number">45</h2>
-                            <p class="course-num-info">students opted this course.</p> 
-                        </div>
-                    </div>
-                    
-                    <div class="course">
-                        <div class="course-name">
-                            <h2 class="course-heading">Operating System</h2>
-                            <p class="course-prof"><em>Taught by Prof. John Doe.</em></p>
-                        </div>
-                        <div class="course-opted">
-                            <h2 class="course-number">45</h2>
-                            <p class="course-num-info">students opted this course.</p> 
-                        </div>
-                    </div>
-                    
-                    <div class="course">
-                        <div class="course-name">
-                            <h2 class="course-heading">Operating System</h2>
-                            <p class="course-prof"><em>Taught by Prof. John Doe.</em></p>
-                        </div>
-                        <div class="course-opted">
-                            <h2 class="course-number">45</h2>
-                            <p class="course-num-info">students opted this course.</p> 
-                        </div>
-                    </div>
-                    
-                    <div class="course">
-                        <div class="course-name">
-                            <h2 class="course-heading">Operating System</h2>
-                            <p class="course-prof"><em>Taught by Prof. John Doe.</em></p>
-                        </div>
-                        <div class="course-opted">
-                            <h2 class="course-number">45</h2>
-                            <p class="course-num-info">students opted this course.</p> 
-                        </div>
-                    </div>
-                    
-                    <div class="course">
-                        <div class="course-name">
-                            <h2 class="course-heading">Operating System</h2>
-                            <p class="course-prof"><em>Taught by Prof. John Doe.</em></p>
-                        </div>
-                        <div class="course-opted">
-                            <h2 class="course-number">45</h2>
-                            <p class="course-num-info">students opted this course.</p> 
-                        </div>
-                    </div>
-                    
-                    <div class="course">
-                        <div class="course-name">
-                            <h2 class="course-heading">Operating System</h2>
-                            <p class="course-prof"><em>Taught by Prof. John Doe.</em></p>
-                        </div>
-                        <div class="course-opted">
-                            <h2 class="course-number">45</h2>
-                            <p class="course-num-info">students opted this course.</p> 
-                        </div>
-                    </div>
-                    
-                    
+                <div id="course-result-container">
 
                 </div>
             </div>
