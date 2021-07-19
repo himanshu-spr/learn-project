@@ -12,17 +12,23 @@
 </head>
 <body onload="studentView.init()">
     <div class="main">
-        <header class="header-container"> 
+        <nav class="header-container"> 
             <div class="img-container">
                 <a href="index.html"><img class="logo" src="./assets/images/IIT-BHU-faculty-post.png" /></a>
             </div>
-            <nav class="navbar">
+            <div class="navbar">
                 <ul class="navbar-list">
                     <a class="nav-link" href="students.html">Students</a> 
                     <a class="nav-link" href="courses.html">Courses</a> 
                 </ul>
-            </nav>
-        </header>
+            </div>
+            <form name="country" class="country-form"> 
+                <label for="country">Country</label>
+                <select id="country" name="country">
+
+                </select> 
+            </form>
+        </nav>
         <section class="student-info-conatiner"> 
             <div id="student-info">
                 
@@ -30,7 +36,7 @@
             <!-- show course -->
             <div id="show-course-background">
                 <div id="show-course-container">
-                    <h2>Courses Taken</h2>
+                    <h2 class="show-course-container-heading"></h2>
                     <a class="student-course-close">
                         <i class="fa fa-window-close" id="student-course-close"></i>
                     </a>
@@ -43,7 +49,7 @@
              <!-- modify courses -->
              <div id="modify-course-background">
                 <div id="modify-course-container">
-                    <h2>Modify Courses Taken</h2>
+                    <h2 class="modify-course-container-heading"></h2>
                     <a class="modify-student-course-close">
                         <i class="fa fa-window-close" id="modify-student-course-close"></i>
                     </a>

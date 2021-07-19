@@ -2,7 +2,7 @@ const model = {
   students : new Map([
     [ 1,    
     {
-      name: "John Doe",
+      name: "Himanshu",
       id: 1,
       year: 1,
       branch: "CSE",
@@ -72,16 +72,18 @@ const model = {
       strength: 40,
       branch: "CSE",
       year: 1,
-      code: "CSE102"
+      code: "CSE102",
+      credits: 9
     }],
     ["CSE103",
     {
-      name: "Database Management Systems",
+      name: "Database Management System",
       prof: "John Doe",
       strength: 20,
       branch: "CSE",
       year: 1,
-      code: "CSE103"
+      code: "CSE103",
+      credits: 10
     }],
     [ "CSE104",
       {
@@ -90,7 +92,8 @@ const model = {
       strength: 25,
       branch: "CSE",
       year: 1,
-      code: "CSE104"
+      code: "CSE104",
+      credits: 11
     }],
     [ "CSE105",
       {
@@ -99,7 +102,8 @@ const model = {
       strength: 34,
       branch: "CSE",
       year: 1,
-      code: "CSE105"
+      code: "CSE105",
+      credits: 13
     }],
     ["CSE106",
     {
@@ -108,7 +112,8 @@ const model = {
       strength: 36,
       branch: "CSE",
       year: 1,
-      code: "CSE106"
+      code: "CSE106",
+      credits: 10
     }],
     ["ME103",
     {
@@ -117,7 +122,8 @@ const model = {
       strength: 41,
       branch: "ME",
       year: 1,
-      code: "ME103"
+      code: "ME103",
+      credits: 11
     }],
     ["ME104",
     {
@@ -126,7 +132,8 @@ const model = {
       strength: 29,
       branch: "ME",
       year: 1,
-      code: "ME104"
+      code: "ME104",
+      credits: 12
     }],
     ["ME106",
     {
@@ -135,7 +142,8 @@ const model = {
       strength: 22,
       branch: "ME",
       year: 1,
-      code: "ME106"
+      code: "ME106",
+      credits: 12
     }],
     ["EE102",
     {
@@ -144,7 +152,8 @@ const model = {
       strength: 21,
       branch: "EE",
       year: 1,
-      code: "EE102"
+      code: "EE102",
+      credits: 10
     }],
     ["EE103",
     {
@@ -153,7 +162,8 @@ const model = {
       strength: 15,
       branch: "EE",
       year: 1,
-      code: "EE103"
+      code: "EE103",
+      credits: 9
     }],
     ["EE104",
     {
@@ -162,7 +172,8 @@ const model = {
       strength: 43,
       branch: "EE",
       year: 1,
-      code: "EE104"
+      code: "EE104",
+      credits: 12
     }],
     ["ECE102",
     {
@@ -171,7 +182,8 @@ const model = {
       strength: 32,
       branch: "ECE",
       year: 1,
-      code: "ECE102"
+      code: "ECE102",
+      credits: 10
     }],
     ["ECE103",
     {
@@ -180,7 +192,8 @@ const model = {
       strength: 26,
       branch: "ECE",
       year: 1,
-      code: "ECE103"
+      code: "ECE103",
+      credits: 10
     }],
     ["ECE104",
     {
@@ -189,7 +202,8 @@ const model = {
       strength: 19,
       branch: "ECE",
       year: 1,
-      code: "ECE104"
+      code: "ECE104",
+      credits: 13
     }],
     ["CE102",
     {
@@ -198,7 +212,8 @@ const model = {
       strength: 31,
       branch: "CE",
       year: 1,
-      code: "CE102"
+      code: "CE102",
+      credits: 12
     }],
     ["CE103",
     {
@@ -207,7 +222,8 @@ const model = {
       strength: 27,
       branch: "CE",
       year: 1,
-      code: "CE103"
+      code: "CE103",
+      credits: 10
     }],
     ["CE104",
     {
@@ -216,69 +232,171 @@ const model = {
       strength: 33,
       branch: "CE",
       year: 1,
-      code: "CE104"
+      code: "CE104",
+      credits: 13
     }],
   ]),
   filter: {
     year: 0,
     branch: "0",
-    sortValue: "0"
+    sortValue: "0",
+    gridView: true,
+    searchString: ""
   },
   branchCourses: new Map([
     [
-      "CSE", {
-        "CSE102": "Operating Systems",
-        "CSE103": "Database Management Systems",
-        "CSE104": "Computer Networks",
-        "CSE105": "Compiler Systems",
-        "CSE106": "Artificial Intelligence",
-      }
+      "CSE", [
+        "CSE102",
+        "CSE103",
+        "CSE104",
+        "CSE105",
+        "CSE106",
+      ]
     ],
     [
-      "ME", {
-        "ME103": "Fluid Mechanics",
-        "ME104": "Solid Mechanics",
-        "ME106": "Material Science",
-      }
+      "ME", [
+        "ME103",
+        "ME104",
+        "ME106",
+      ]
     ],
     [
-      "ECE", {
-        "ECE102": "Semiconductors",
-        "ECE103": "Electronics System",
-        "ECE104": "Analog Communication",
-      }
+      "ECE", [
+        "ECE102",
+        "ECE103",
+        "ECE104",
+      ]
     ],
     [
-      "EE", {
-        "EE102": "Control System Engineering",
-        "EE103": "Rotating AC Machines",
-        "EE104": "VLSI Technology and Design",
-      }
+      "EE", [
+        "EE102",
+        "EE103",
+        "EE104",
+      ]
     ],
     [
-      "CE", {
-        "CE102": "Waste Management",
-        "CE103": "Transportation Engineering",
-        "CE104": "Structural Analysis",
-      }
+      "CE", [
+        "CE102",
+        "CE103",
+        "CE104",
+      ]
     ]
-  ])
+  ]),
+  branchColor: {
+    "CSE": "#fcbdbd",
+    "ME": "#fcfa72",
+    "ECE": "#9efa87",
+    "EE": "#87faf8",
+    "CE": "#fcbdfb"
+  }
 };
 
 const controller = {
+  init: function() {
+    navBarView.initializeCountrySelect();
+  },
+
+  getCountries:  async function() {
+    const res = await fetch("https://restcountries.eu/rest/v2/all");
+    const resJSON = await res.json();
+    
+    const allCountries = resJSON.map((country) => {
+      return country.name;
+    });
+
+    return allCountries;
+  },
+
+  getFilterYear: function() {
+    return model.filter.year;
+  },
+
+  getFilterBranch: function() {
+    return model.filter.branch;
+  },
+
+  getSearchString: function() {
+    return model.filter.searchString;
+  },
 
   getBranchAllCourses: function(course) {
     return model.branchCourses.get(course);
+  },
+
+  getBranchColor: function(code){
+    return model.branchColor[code];
+  },
+
+  getCourseNameFromCode: function(code){
+    return model.courses.get(code)['name'];
+  },
+
+  getCourseCredits: function(code){
+    return model.courses.get(code)['credits'];
+  },
+
+  getCourseDetails: function(code) {
+    return model.courses.get(code);
   },
 
   getStudents: function() {
     return Array.from(model.students.values());
   },
 
+  getStudent: function(id){
+    return model.students.get(id);
+  },
+
   getCourses: function() {
     return Array.from(model.courses.values());
   },
+
+  getView: function(){
+    return (model.filter.gridView)? "grid" : "list";
+  },
+
+  setFilterYear: function(value) {
+    model.filter.year = value;
+  },
+  
+  setFilterBranch: function(value) {
+    model.filter.branch = value;
+  },
+  
+  setFilterSort: function(value) {
+    model.filter.sortValue = value;
+  },
+
+  setToggleView: function(){
+    model.filter.gridView = !model.filter.gridView;
+  },
+
+  setFilterSearchString: function(value) {
+    model.filter.searchString = value;
+  },
+
+  addCourse: function(courseCode, newCourse){
+    model.courses.set(courseCode,newCourse);
+  },
+
+  getSortValue: function(){
+    return model.filter.sortValue;
+  }
 };
+
+const navBarView = {
+  initializeCountrySelect: async function(){
+    const countryForm = document.forms.country;
+    const countrySelectElement = countryForm.querySelector("#country");
+
+    const allCountries = await controller.getCountries();
+    const countriesOptionElements = allCountries.map((country) => {
+      return (`<option value=${country}>${country}</option>`);
+    });
+    
+    countrySelectElement.innerHTML = countriesOptionElements;
+  }
+}
 
 const studentView = {
   init: function() {
@@ -286,21 +404,31 @@ const studentView = {
     this.render();
   },
 
-  getModifyCourseElement: function(student, courseCode, courseName) {
+  getModifyCourseElement: function(student, courseCode) {
     const mainContainer = document.createElement("div");
     mainContainer.className = "modify-course-element-container";
 
-    const infoElement = document.createElement("div");
-    infoElement.className = "modify-course-info-element";
-
+    const codeElement = document.createElement("div");
+    codeElement.className = "modify-course-info-element";
+    
     const codeInfo = document.createElement("p");
     codeInfo.innerHTML = courseCode;
+    codeElement.append(codeInfo);
+
+    const nameElement = document.createElement("div");
+    nameElement.className = "modify-course-info-element";
+    nameElement.classList.add("modify-course-info-name-element");
 
     const nameInfo = document.createElement("p");
-    nameInfo.innerHTML = courseName;
+    nameInfo.innerHTML = controller.getCourseNameFromCode(courseCode);
+    nameElement.append(nameInfo);
 
-    infoElement.append(codeInfo);
-    infoElement.append(nameInfo);
+    const creditElement = document.createElement("div");
+    creditElement.className = "modify-course-info-element";
+
+    const creditInfo = document.createElement("p");
+    creditInfo.innerHTML = controller.getCourseCredits(courseCode);
+    creditElement.append(creditInfo);
 
     // add remove buttons
 
@@ -351,9 +479,36 @@ const studentView = {
     modifyButtonContainer.append(addButton);
     modifyButtonContainer.append(removeButton);
 
-    mainContainer.append(infoElement);
+    // mainContainer.append(infoElement);
+    mainContainer.append(codeElement);
+    mainContainer.append(nameElement);
+    mainContainer.append(creditElement);
     mainContainer.append(modifyButtonContainer);
     return mainContainer;
+  },
+
+  getHeaderRow: function() {
+    const headerRowElement = document.createElement("div");
+    headerRowElement.className = "modify-course-header-row";
+    
+    const codeText= document.createElement("p");
+    codeText.innerHTML = "Code";
+
+    const nameText = document.createElement("p");
+    nameText.innerHTML = "Course Name";
+
+    const creditText = document.createElement("p");
+    creditText.innerHTML = "Credits";
+
+    const modifyText = document.createElement("p");
+    modifyText.innerHTML = "Modify selection";
+
+    headerRowElement.append(codeText);
+    headerRowElement.append(nameText);
+    headerRowElement.append(creditText);
+    headerRowElement.append(modifyText);
+
+    return headerRowElement;
   },
 
   editCourse: function(event) {
@@ -364,21 +519,26 @@ const studentView = {
     const curStudentID = curStudentElement.querySelector("#student-id");
     let idString = curStudentID.innerText.split(' ')[1];
 
-    const curStudent = model.students.get(parseInt(idString));
+    const curStudent = controller.getStudent(parseInt(idString));
     
     // //  pop-up form
     const backgroundElement = document.getElementById("modify-course-background")
     const containerElement = document.getElementById("modify-course-container")
-    
+    const heading = containerElement.querySelector(".modify-course-container-heading");
+
+    heading.innerHTML = "Modify " + curStudent.name.split(" ")[0] + "'s Courses";
+
     const resultContainer = containerElement.querySelector(".student-course-modify-container");
     resultContainer.innerHTML = '';
     
+    resultContainer.append(this.getHeaderRow());
+
     const curBranch = curStudent.branch;
     const branchAllCourses = controller.getBranchAllCourses(curBranch);
     
-    for (let courseCode in branchAllCourses){
-      resultContainer.append(this.getModifyCourseElement(curStudent,courseCode,branchAllCourses[courseCode]));
-    }
+    branchAllCourses.forEach((courseCode) => {
+      resultContainer.append(this.getModifyCourseElement(curStudent,courseCode));
+    });
 
     backgroundElement.style.display = "block";
     containerElement.style.display = "flex";
@@ -398,11 +558,20 @@ const studentView = {
     }
   },
 
-  getCourseTakenElement : function(course){
-    const listItem = document.createElement("li");
-    listItem.innerHTML = course;
-    listItem.className = "course-taken-item";
-    return listItem;
+  getCourseTakenElement : function(courseCode){
+    const mainContainer = document.createElement("div");
+    mainContainer.className = "show-course-element-container";
+   
+    const codeInfo = document.createElement("p");
+    codeInfo.innerHTML = courseCode;
+
+    const nameInfo = document.createElement("p");
+    nameInfo.innerHTML = controller.getCourseNameFromCode(courseCode);
+
+    mainContainer.append(codeInfo);
+    mainContainer.append(nameInfo);
+
+    return mainContainer;
   },
   
   getEmptyPlaceholderElement: function() {
@@ -421,25 +590,24 @@ const studentView = {
     const curStudentID = curStudentElement.querySelector("#student-id");
     let idString = curStudentID.innerText.split(' ')[1];
 
-    const curStudent = model.students.get(parseInt(idString));
+    const curStudent = controller.getStudent(parseInt(idString));
     
     //  pop-up form
     const backgroundElement = document.getElementById("show-course-background")
     const containerElement = document.getElementById("show-course-container")
-    
+    const heading = containerElement.querySelector(".show-course-container-heading");
+
+    heading.innerHTML = curStudent.name.split(" ")[0] + "'s Courses";
+
     const resultContainer = containerElement.querySelector(".student-course-container");
     resultContainer.innerHTML = '';
     
     if(curStudent.courseTaken.size == 0){
       resultContainer.append(this.getEmptyPlaceholderElement());
     }else {
-      const resultListElement = document.createElement("ul");
-
       curStudent.courseTaken.forEach((course) => {
-        resultListElement.append(this.getCourseTakenElement(course));
+        resultContainer.append(this.getCourseTakenElement(course));
       });
-
-      resultContainer.append(resultListElement);
     }
 
     backgroundElement.style.display = "block";
@@ -523,8 +691,6 @@ const studentView = {
   }
 };
 
-
-
 const coursesView = {
   init: function() {
     this.courseContainer = document.getElementById("course-result-container");
@@ -532,34 +698,40 @@ const coursesView = {
     this.render();
   },
 
-  getCourseElem: function(course) {
+  getGridCourseElem: function(course) {
     const outerContainer = document.createElement("div");
-    outerContainer.className = "course";
+    outerContainer.className = "course-grid";
+
+    outerContainer.style.backgroundColor = controller.getBranchColor(course.branch);
 
     const courseNameElement = document.createElement("div");
-    courseNameElement.className = "course-name";
+    courseNameElement.className = "course-grid-name";
 
     const courseName = document.createElement("h2");
-    courseName.className = "course-heading";
+    courseName.className = "course-grid-heading";
     courseName.innerHTML = course.name;
 
+    const courseNameTooltip = document.createElement("span");
+    courseNameTooltip.className = "course-grid-name--tooltip";
+    courseNameTooltip.innerHTML = course.name;
+    
     const courseProf = document.createElement("p");
-    courseProf.className = "course-prof";
+    courseProf.className = "course-grid-prof";
     courseProf.innerHTML = `<em> Taught by Prof. ${course.prof}</em>`;
 
     const courseMetaInfo = document.createElement("div");
-    courseMetaInfo.className = "course-meta-info";
+    courseMetaInfo.className = "course-grid-meta-info";
   
     const courseBranch = document.createElement("p");
-    courseBranch.className = "course-branch";
+    courseBranch.className = "course-grid-branch";
     courseBranch.innerHTML = `Branch: ${course.branch}`;
 
     const courseYear = document.createElement("p");
-    courseYear.className = "course-year";
+    courseYear.className = "course-grid-year";
     courseYear.innerHTML = `Year: ${course.year}`;
 
     const courseCode = document.createElement("p");
-    courseCode.className = "course-code";
+    courseCode.className = "course-grid-code";
     courseCode.innerHTML = `Code: ${course.code}`;
 
     courseMetaInfo.append(courseCode);
@@ -567,20 +739,21 @@ const coursesView = {
     courseMetaInfo.append(courseYear);
 
     courseNameElement.append(courseName);
+    courseNameElement.append(courseNameTooltip);
     courseNameElement.append(courseProf);
     courseNameElement.append(courseMetaInfo);
 
     //strength element
 
     const courseStrengthElement = document.createElement("div");
-    courseStrengthElement.className = "course-opted";
+    courseStrengthElement.className = "course-grid-opted";
 
     const courseNumber = document.createElement("h2");
-    courseNumber.className = "course-number";
+    courseNumber.className = "course-grid-number";
     courseNumber.innerHTML = course.strength;
 
     const courseStrengthText = document.createElement("p");
-    courseStrengthText.className = "course-num-info";
+    courseStrengthText.className = "course-grid-num-info";
     courseStrengthText.innerHTML = "students opted this course.";
 
     courseStrengthElement.append(courseNumber);
@@ -589,9 +762,9 @@ const coursesView = {
     // edit element
 
     const editElement = document.createElement("div");
-    editElement.className = "course-edit";
+    editElement.className = "course-grid-edit";
     const editLink = document.createElement("button");
-    editLink.className = "course-edit-btn";
+    editLink.className = "course-grid-edit-btn";
     editLink.innerHTML = `<i class="fa fa-edit"></i>`; 
 
     editElement.append(editLink); 
@@ -600,9 +773,110 @@ const coursesView = {
     outerContainer.append(courseStrengthElement);
     outerContainer.append(editElement);
 
+    courseName.onmouseover = function(){
+      courseNameTooltip.style.display = "inline";
+    }
+
+    courseName.onmouseout = function(){
+      courseNameTooltip.style.display = "none";
+    }
+
     return outerContainer;
   },
 
+  getListViewPropElement: function(prop, value) {
+    const coursePropElement = document.createElement("div");
+    coursePropElement.className = "course-list-prop";
+
+    const courseProp = document.createElement("p");
+    courseProp.innerHTML = value;
+
+    if(prop == "code"){
+      courseProp.className = "course-list-code";
+    }
+
+    coursePropElement.append(courseProp);
+
+    if(prop == "name"){
+      const courseNameTooltip = document.createElement("span");
+      courseNameTooltip.className = "course-list-name--tooltip";
+      courseNameTooltip.innerHTML = value;
+
+      courseProp.onmouseover = function(){
+        courseNameTooltip.style.display = "inline";
+      }
+  
+      courseProp.onmouseout = function(){
+        courseNameTooltip.style.display = "none";
+      }
+
+      coursePropElement.append(courseNameTooltip);
+    }
+
+    return coursePropElement;
+  },
+
+  getListHeaderRow: function() {
+    const headerRowElement = document.createElement("div");
+    headerRowElement.className = "course-list-header-row";
+    
+    const codeText= document.createElement("p");
+    codeText.innerHTML = "Code";
+
+    const nameText = document.createElement("p");
+    nameText.innerHTML = "Course Name";
+
+    const profText = document.createElement("p");
+    profText.innerHTML = "Professor";
+
+    const branchText = document.createElement("p");
+    branchText.innerHTML = "Branch";
+
+    const yearText = document.createElement("p");
+    yearText.innerHTML = "Year";
+
+    const strengthText = document.createElement("p");
+    strengthText.innerHTML = "Strength";
+
+    headerRowElement.append(codeText);
+    headerRowElement.append(nameText);
+    headerRowElement.append(profText);
+    headerRowElement.append(branchText);
+    headerRowElement.append(yearText);
+    headerRowElement.append(strengthText);
+
+    return headerRowElement;
+  },
+
+  getListCourseElem: function(course) {
+    const outerContainer = document.createElement("div");
+    outerContainer.className = "course-list";
+
+    outerContainer.style.backgroundColor = controller.getBranchColor(course.branch);
+    
+    coursePropList = ['code', 'name', 'prof', 'branch', 'year', 'strength'];
+    // code
+    coursePropList.forEach((prop) =>  {
+      const propElement = this.getListViewPropElement(prop,course[prop]);
+      
+      outerContainer.append(propElement);
+    });
+
+    // edit element
+
+    const editElement = document.createElement("div");
+    editElement.className = "course-list-edit";
+    const editLink = document.createElement("button");
+    editLink.className = "course-list-edit-btn";
+    editLink.innerHTML = `<i class="fa fa-edit"></i>`; 
+
+    editElement.append(editLink); 
+    
+    outerContainer.append(editElement);
+
+    return outerContainer;
+  },
+  
   getEmptyPlaceholderElement: function() {
     const placeholderText = document.createElement("p");
     placeholderText.innerHTML = "No courses! Try other filters.";
@@ -616,11 +890,23 @@ const coursesView = {
     this.courseContainer.innerHTML = '';
 
     this.modifyOrder(courses);
+    
+    let resCourses = courses.filter((course) => {
+      const filterYear = controller.getFilterYear();
+      const filterBranch = controller.getFilterBranch();
 
-    const resCourses = courses.filter((course) => {
-      return (((course.year == model.filter.year) || model.filter.year == 0)
+      return (((course.year == filterYear) || filterYear == 0)
       &&
-      (((course.branch == model.filter.branch) || model.filter.branch == "0")));
+      (((course.branch == filterBranch) || filterBranch == "0")));
+    });
+
+    // search value
+
+    resCourses = resCourses.filter((course) => {
+      const searchString = controller.getSearchString().toLowerCase();
+      const curCourseName = course.name.toLowerCase();
+      
+      return curCourseName.includes(searchString);
     });
     
     if(resCourses.length == 0) {
@@ -628,10 +914,19 @@ const coursesView = {
       return;
     }
 
-    for (course of resCourses) {
-      const curElement = this.getCourseElem(course);      
-      this.courseContainer.append(curElement);
+    if(controller.getView() == "list"){
+      this.courseContainer.append(this.getListHeaderRow());
     }
+
+    resCourses.forEach((course) =>  {
+      let curElement = null;
+      if(controller.getView() == "grid") {
+        curElement = this.getGridCourseElem(course);      
+      }else{
+        curElement = this.getListCourseElem(course);      
+      }
+      this.courseContainer.append(curElement);
+    });
   },
 
   addCourse: function(event, callback) {
@@ -658,10 +953,6 @@ const coursesView = {
       let courseYear = formElement.year.value;
       let courseCode = formElement.coursecode.value.toUpperCase();
 
-      if(model.courses.get(courseCode)){
-        alert("hii");
-      }
-
       let newCourse = {       
         name: courseName,
         prof: "John Doe",
@@ -671,8 +962,8 @@ const coursesView = {
         code: courseCode
       };
 
-      model.courses.set(courseCode,newCourse);
-      
+      controller.addCourse(courseCode, newCourse);
+
       formElement.style.display="none";
       backgroundElement.style.display="none";
 
@@ -684,12 +975,18 @@ const coursesView = {
     // getting current course
     if(event.target.className !== "fa fa-edit") return;
     const curCourseElement = event.target.parentNode.parentNode.parentNode;
-  
-    const curCourseCode = curCourseElement.querySelector(".course-code");
-    let codeString = curCourseCode.innerText.split(' ')[1];
-    
-    const curCourse = model.courses.get(codeString);
-  
+      
+    let codeString = null;
+
+    if(controller.getView() == "grid"){
+      curCourseCode = curCourseElement.querySelector(".course-grid-code"); 
+      codeString = curCourseCode.innerText.split(' ')[1];
+    }else{
+      curCourseCode = curCourseElement.querySelector(".course-list-code");
+      codeString = curCourseCode.innerText;
+    }
+
+    const curCourse = controller.getCourseDetails(codeString);  
     // pop-up form
     const backgroundElement = document.getElementById("edit-course-form")
     const formElement = document.forms.editCourse;
@@ -725,7 +1022,7 @@ const coursesView = {
         code: courseCode
       };
 
-      model.courses.set(courseCode,newCourse);
+      controller.addCourse(courseCode, newCourse);
       
       formElement.style.display="none";
       backgroundElement.style.display="none";
@@ -736,7 +1033,9 @@ const coursesView = {
   },
 
   modifyOrder: function(courses) {
-    switch (model.filter.sortValue) {
+    const sortValue = controller.getSortValue();
+
+    switch (sortValue) {
       case "0":
         break;
       case "1":
@@ -771,22 +1070,35 @@ if(document.getElementById("course-add-btn")){
   const courseYearFilter = document.forms.courseYearInput;
   const courseBranchFilter = document.forms.courseBranchInput;
   const courseSort = document.forms.courseSort;
+  const courseView = document.forms.courseView;
+  const courseSearch = document.forms.courseSearch;
 
   courseYearFilter.year.onchange = () => {
-    model.filter.year = courseYearFilter.year.value;
+    controller.setFilterYear(courseYearFilter.year.value);
     coursesView.render();
   }
 
   courseBranchFilter.branch.onchange = () => {
-    model.filter.branch = courseBranchFilter.branch.value;
+    controller.setFilterBranch(courseBranchFilter.branch.value);
     coursesView.render();
   }
 
   courseSort.sort.onchange = () => {
-    model.filter.sortValue = courseSort.sort.value;
+    controller.setFilterSort(courseSort.sort.value);
     coursesView.render();
   }
 
+  courseView.view.onchange = () => {
+    controller.setToggleView();
+    coursesView.render();
+  }
+
+  courseSearch.onsubmit = (e) => {
+    e.preventDefault();
+    controller.setFilterSearchString(courseSearch.search.value);
+    coursesView.render();
+  }
+ 
   // update course 
 
   const coursesContainer = document.getElementById("course-result-container");
@@ -807,3 +1119,5 @@ if(document.getElementById("student-info")) {
   editTakenCourse.addEventListener("click", studentView.editCourse.bind(studentView));
 
 }
+
+controller.init();
