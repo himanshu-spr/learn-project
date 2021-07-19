@@ -1,4 +1,4 @@
 # learn-project
 
 
-Student Mamagement Portal Website.
+Student Management Portal Website.
