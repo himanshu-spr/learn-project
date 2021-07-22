@@ -409,14 +409,14 @@ const studentView = {
     mainContainer.className = "modify-course-element-container";
 
     const codeElement = document.createElement("div");
-    codeElement.className = "modify-course-info-element";
+    codeElement.className = "modify-course-info-element bold";
     
     const codeInfo = document.createElement("p");
     codeInfo.innerHTML = courseCode;
     codeElement.append(codeInfo);
 
     const nameElement = document.createElement("div");
-    nameElement.className = "modify-course-info-element";
+    nameElement.className = "modify-course-info-element bold";
     nameElement.classList.add("modify-course-info-name-element");
 
     const nameInfo = document.createElement("p");
@@ -424,7 +424,7 @@ const studentView = {
     nameElement.append(nameInfo);
 
     const creditElement = document.createElement("div");
-    creditElement.className = "modify-course-info-element";
+    creditElement.className = "modify-course-info-element bold";
 
     const creditInfo = document.createElement("p");
     creditInfo.innerHTML = controller.getCourseCredits(courseCode);
@@ -560,7 +560,7 @@ const studentView = {
 
   getCourseTakenElement : function(courseCode){
     const mainContainer = document.createElement("div");
-    mainContainer.className = "show-course-element-container";
+    mainContainer.className = "show-course-element-container bold";
    
     const codeInfo = document.createElement("p");
     codeInfo.innerHTML = courseCode;
@@ -643,6 +643,7 @@ const studentView = {
     const studentName = document.createElement("p");
     studentName.className = "student-text";
     studentName.classList.add("student-name");
+    studentName.classList.add("bold");
     studentName.innerHTML = student.name;
 
     const studentID = document.createElement("p");
@@ -708,7 +709,7 @@ const coursesView = {
     courseNameElement.className = "course-grid-name";
 
     const courseName = document.createElement("h2");
-    courseName.className = "course-grid-heading";
+    courseName.className = "course-grid-heading bold";
     courseName.innerHTML = course.name;
 
     const courseNameTooltip = document.createElement("span");
@@ -749,7 +750,7 @@ const coursesView = {
     courseStrengthElement.className = "course-grid-opted";
 
     const courseNumber = document.createElement("h2");
-    courseNumber.className = "course-grid-number";
+    courseNumber.className = "course-grid-number bold";
     courseNumber.innerHTML = course.strength;
 
     const courseStrengthText = document.createElement("p");
@@ -850,7 +851,7 @@ const coursesView = {
 
   getListCourseElem: function(course) {
     const outerContainer = document.createElement("div");
-    outerContainer.className = "course-list";
+    outerContainer.className = "course-list bold";
 
     outerContainer.style.backgroundColor = controller.getBranchColor(course.branch);
     
@@ -880,7 +881,7 @@ const coursesView = {
   getEmptyPlaceholderElement: function() {
     const placeholderText = document.createElement("p");
     placeholderText.innerHTML = "No courses! Try other filters.";
-    placeholderText.className = "placeholder-text";
+    placeholderText.className = "placeholder-text bold";
 
     return placeholderText;
   },

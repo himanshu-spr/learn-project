@@ -15,6 +15,10 @@ html,body { height: 100%; margin: 0px; padding: 0px;
     height: 100%;
 }
 
+.bold {
+    font-weight: 700;
+}
+
 .header-container {
     width: 100%;
     background-color: #7af0a3;
@@ -50,8 +54,7 @@ html,body { height: 100%; margin: 0px; padding: 0px;
     padding: 0 1rem;
     margin-top:2rem;
     text-decoration: none;
-    font-weight: 700;
-    font-size: 30px; 
+    font-size: 1.6rem; 
     color:#524f4f;  
 }
 
@@ -59,17 +62,12 @@ html,body { height: 100%; margin: 0px; padding: 0px;
     color:black;  
 }
 
-.link-active {
-    background-color: thistle;
-    color:red;
-}
 
 .info-container {
     height: 88%;
 }
 
 .info-container p {
-    font-weight: 700;
     font-size: 100px;
     margin:unset;
     padding-top: 100px;
@@ -82,7 +80,6 @@ html,body { height: 100%; margin: 0px; padding: 0px;
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 1rem;
-    margin:0;
 }
 
 .student {
@@ -126,7 +123,6 @@ html,body { height: 100%; margin: 0px; padding: 0px;
     overflow: hidden;   
     text-overflow: ellipsis;
     font-size: 1rem;
-    font-weight: 700;
     width:100px;
 }
 
@@ -164,11 +160,6 @@ html,body { height: 100%; margin: 0px; padding: 0px;
     color: white;
 }
 
-.courses-container {
-    margin: 0;
-    padding:0;
-}
-
 .courses-options {
     display: grid;
     grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr;
@@ -184,8 +175,6 @@ html,body { height: 100%; margin: 0px; padding: 0px;
     display: flex;
     justify-self: center;
     align-self: center;
-    margin:0;
-    padding:0 ;
 }
 
 .course-view {
@@ -199,7 +188,6 @@ html,body { height: 100%; margin: 0px; padding: 0px;
     padding: 0.3rem;
     background-color: #f5cb42;
     border-radius: 5px;
-    font-weight: 700;
     font-size: 1rem;
     box-shadow: 1px 1px 3px #524f4f;
     border-color: transparent;
@@ -227,32 +215,11 @@ html,body { height: 100%; margin: 0px; padding: 0px;
     background-color: #f1f1f1;
 }
 
-.submit-btn {
-    margin: 0 2rem;
-    padding: 0.5rem;
-    background-color:#f5cb42 ;
-    border-radius: 5px;
-    font-weight: 700;
-    border-color: transparent;
-    box-shadow: 2px 2px 5px #524f4f;
-    color:#524f4f;
-}
-
-.submit-btn:hover {
-    background-color: #524f4f;
-    transition:200ms; 
-    color:#f5cb42;
-}
-
 .section-seperation {
     border-color: transparent;
     box-shadow: 2px 2px 5px rgba(0,0,0,.5);
 }
 
-.courses-info {
-    padding:0;
-    margin:0;
-}
 
 .search-option {
     display: flex;
@@ -267,7 +234,6 @@ html,body { height: 100%; margin: 0px; padding: 0px;
 }
 
 .search-input {
-    margin:0;
     padding: .3rem;
     font-size: 1rem;
     border: 1px solid grey;
@@ -294,7 +260,6 @@ html,body { height: 100%; margin: 0px; padding: 0px;
         padding: 0 1rem;
         margin-top:1rem;
         text-decoration: none;
-        font-weight: 700;
         font-size: 25px; 
         color:#524f4f;  
     }
@@ -334,7 +299,6 @@ html,body { height: 100%; margin: 0px; padding: 0px;
     
     padding: 1rem 1rem;
     flex-wrap: wrap;
-    margin:0;
 }
 
 .course-info {
@@ -348,7 +312,6 @@ html,body { height: 100%; margin: 0px; padding: 0px;
 }
 
 .courses-options label{
-    font-weight: 700;
     color:#524f4f;
     padding:0 0.3rem;
 }
@@ -363,7 +326,6 @@ html,body { height: 100%; margin: 0px; padding: 0px;
     width: 80%;
     box-sizing: border-box;
     border-radius: 5px;
-    font-weight: 700;
     font-size: 1.1rem;
     /* box-shadow: 1px 1px 5px rgba(56, 232, 255); */
 }
@@ -395,7 +357,6 @@ html,body { height: 100%; margin: 0px; padding: 0px;
 .course-list-edit-btn {
     width:100%;
     border-color: transparent;
-    margin:0;
     background-color: rgba(0,0,0,0.01);
     padding:0 0.2rem;
     color: #9c9494;
@@ -408,13 +369,10 @@ html,body { height: 100%; margin: 0px; padding: 0px;
     display: grid;
     grid-template-columns: 1fr 2fr 1.5fr repeat(4, 1fr);
     width: 80%;
-    margin:0;
-    padding:0;
 }
 
 .course-list-header-row p{
     text-align: center;
-    margin:0;
     padding-bottom: 1rem;
 }
 
@@ -440,8 +398,6 @@ html,body { height: 100%; margin: 0px; padding: 0px;
     font-size: 0.84rem;
     display: flex;
     justify-content: space-between;
-    padding:0;
-    margin: 0;
 }
 
 .course-grid-heading {
@@ -449,7 +405,6 @@ html,body { height: 100%; margin: 0px; padding: 0px;
     /* display: inline-block; */
     overflow: hidden;   
     text-overflow: ellipsis;
-    font-weight: 700;
     font-size: 20px;
     margin:0;
     padding:0;
@@ -457,7 +412,6 @@ html,body { height: 100%; margin: 0px; padding: 0px;
 }
 
 .course-grid-number {
-    font-weight: 700;
     font-size: 20px;
     margin:0;
     padding:0;
@@ -488,7 +442,6 @@ html,body { height: 100%; margin: 0px; padding: 0px;
 .course-grid-edit-btn {
     width:100%;
     border-color: transparent;
-    margin:0;
     background-color: rgba(0,0,0,0.01);
     padding:0 0.2rem;
     color: #9c9494;
@@ -579,7 +532,6 @@ html,body { height: 100%; margin: 0px; padding: 0px;
 
 .placeholder-text {
     font-size: 2rem;
-    font-weight: 700;
 }
 
 #show-course-container{
@@ -678,16 +630,13 @@ html,body { height: 100%; margin: 0px; padding: 0px;
 }
 
 .modify-course-info-element p{
-    font-weight: 700;
     white-space:nowrap;
     overflow: hidden;   
     text-overflow: ellipsis;
-    /* padding: 1rem 1.1rem; */
     margin:0;
 }
 
 .show-course-element-container p{
-    font-weight: 700;
     padding: 1rem 1.1rem;
     margin:0;
 }
@@ -746,7 +695,6 @@ html,body { height: 100%; margin: 0px; padding: 0px;
 }
 
 .country-form label{
-    font-weight: 700;
     color:#524f4f;
     margin: 0 0.4rem;
 }
@@ -779,6 +727,5 @@ html,body { height: 100%; margin: 0px; padding: 0px;
     border-radius: 5px;
     padding: 0.2rem 0.3rem;
     top: -0.1rem;
-    font-weight: 300;
     font-size: 0.9rem;
   }
